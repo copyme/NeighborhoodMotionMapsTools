@@ -37,7 +37,6 @@ private:
     Z3i::RealPoint origin;
     Z3i::RealVector trans;
     Z3i::RealVector axis;
-    std::vector<QPointF> linePoints;
 
 };
 

@@ -39,7 +39,7 @@ void Torus2D::colorChanged(RealPoint & point, TilingWidget *w)
 void Torus2D::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
-    painter.setRenderHints(QPainter::Antialiasing);
+    painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
 
     QPolygonF poly;
 
@@ -65,36 +65,37 @@ void Torus2D::paintEvent(QPaintEvent *)
     pen = QPen(Qt::red, 2);
     painter.setPen ( pen );
     paintCriticalLinesHexes ( QPointF ( size().width() / 2. - m_cos * m_sqrt3 * size().width() / 2.,
-                                        size().height() / 2. - m_sin * m_sqrt3 * size().width() / 2. ), painter );
+                                        size().height() / 2. + m_sin * m_sqrt3 * size().width() / 2. ), painter );
 
     pen = QPen(QColor(255, 165, 0), 2);
     painter.setPen ( pen );
     paintCriticalLinesHexes ( QPointF ( size().width() / 2. + m_cos * m_sqrt3 * size().width() / 2.,
-                                        size().height() / 2. + m_sin * m_sqrt3 * size().width() / 2. ), painter );
+                                        size().height() / 2. - m_sin * m_sqrt3 * size().width() / 2. ), painter );
 
     pen = QPen(Qt::yellow, 2);
     painter.setPen ( pen );
-    paintCriticalLinesHexes ( QPointF ( size().width() / 2. + ( m_cos * m_sqrt3 / 2. - 3. / 2. * m_sin ) * size().width() / 2.,
-                                        size().height() / 2. + ( m_sin * m_sqrt3 / 2. + 3. / 2. * m_cos ) * size().height() / 2. ),
+    paintCriticalLinesHexes ( QPointF ( size().width() / 2. - ( -m_cos * m_sqrt3 / 2. + 3. / 2. * m_sin ) * size().width() / 2.,
+                                        size().height() / 2. + ( -m_sin * m_sqrt3 / 2. - 3. / 2. * m_cos ) * size().height() / 2. ),
                               painter );
 
     pen = QPen(Qt::green, 2);
     painter.setPen ( pen );
-    paintCriticalLinesHexes ( QPointF ( size().width() / 2. + ( -m_cos * m_sqrt3 / 2. - 3. / 2. * m_sin ) * size().width() / 2.,
-                                        size().height() / 2. + ( -m_sin * m_sqrt3 / 2. + 3. / 2. * m_cos ) * size().height() / 2. ),
+    paintCriticalLinesHexes ( QPointF ( size().width() / 2. - ( m_cos * m_sqrt3 / 2. + 3. / 2. * m_sin ) * size().width() / 2.,
+                                        size().height() / 2. + (m_sin * m_sqrt3 / 2. - 3. / 2. * m_cos ) * size().height() / 2. ),
                               painter );
 
     pen = QPen(Qt::magenta, 2);
     painter.setPen ( pen );
-    paintCriticalLinesHexes ( QPointF ( size().width() / 2. + ( m_cos * m_sqrt3 / 2. + 3. / 2. * m_sin ) * size().width() / 2.,
-                                        size().height() / 2. + ( m_sin * m_sqrt3 / 2. - 3. / 2. * m_cos ) * size().height() / 2. ),
+    paintCriticalLinesHexes ( QPointF ( size().width() / 2. - (-m_cos * m_sqrt3 / 2. - 3. / 2. * m_sin ) * size().width() / 2.,
+                                        size().height() / 2. + (-m_sin * m_sqrt3 / 2. + 3. / 2. * m_cos ) * size().height() / 2. ),
                               painter );
 
     pen = QPen(Qt::cyan, 2);
     painter.setPen ( pen );
-    paintCriticalLinesHexes ( QPointF ( size().width() / 2. + ( -m_cos * m_sqrt3 / 2. + 3. / 2. * m_sin ) * size().width() / 2.,
-                                        size().height() / 2. + ( -m_sin * m_sqrt3 / 2. - 3. / 2. * m_cos ) * size().height() / 2. ),
+    paintCriticalLinesHexes ( QPointF ( size().width() / 2. - (m_cos * m_sqrt3 / 2. - 3. / 2. * m_sin ) * size().width() / 2.,
+                                        size().height() / 2. + (m_sin * m_sqrt3 / 2. + 3. / 2. * m_cos) * size().height() / 2. ),
                               painter );
+
 }
 
 QPointF Torus2D::hexCorners(const QPointF &center, float size, uint index, bool pointTopped)

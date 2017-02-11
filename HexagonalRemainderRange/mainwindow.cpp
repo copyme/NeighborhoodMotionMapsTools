@@ -40,32 +40,21 @@ void MainWindow::changedAngle(double angle)
     // we work in the cube coordinate system fixed to a plane which cuts 3D Cartesian grid
     ForwardRigidTransformation3D<Z3i::Space> forTrans ( origin, axis, angle, trans );
 
-    bool status = false;
-
-    for ( std::map<TilingWidget *, Z3i::Point>::const_iterator it = tilingToPoint.cbegin(); it != tilingToPoint.cend(); ++it )
+    for ( auto it:tilingToPoint)
     {
         std::vector<Z3i::Point>pointsMap(6);
         for ( unsigned int i = 0; i < 6; i++ )
         {
-            pointsMap[i] =  HexTools::CubeRounding(forTrans(Z3i::RealPoint(neighbors[i] + (*it).second)))
-                    - HexTools::CubeRounding(forTrans(Z3i::RealPoint((*it).second)));
-            if(pointsMap[i] != neighbors[i])
-                status = true;
-        }
-        // some checks to be removed
-        if ( status )
-        {
-            Z3i::RealVector t = trans - HexTools::CubeRounding(trans);
-            RealPoint p = HexTools::CartesianToHex(RealPoint(t[0],t[1]));
-            linePoints.push_back(QPointF(p[0],p[1]));
+            pointsMap[i] =  HexTools::CubeRounding(forTrans(Z3i::RealPoint(neighbors[i] + it.second)))
+                    - HexTools::CubeRounding(forTrans(Z3i::RealPoint(it.second)));
         }
         //it will work only with modf. ver. of DGtal
-        Z3i::RealPoint realImage = forTrans ( Z3i::RealPoint ( (*it).second ) );
+        Z3i::RealPoint realImage = forTrans ( Z3i::RealPoint ( it.second ) );
         Z3i::Point intPoint = HexTools::CubeRounding ( realImage );
         RealPoint map = HexTools::CubeToAxial(realImage - intPoint);
         map = HexTools::CartesianToHex ( map );
-        (*(*it).first).colorChanged(pointsMap);
-        torus.colorChanged(map, (*it).first );
+        (*it.first).colorChanged(pointsMap);
+        torus.colorChanged(map, it.first );
 
     }
 }
@@ -78,8 +67,9 @@ void MainWindow::addPoints()
     {
         TilingWidget * cw = new TilingWidget ( QRect(350, 350, 50, 52), &torus,  (ui->x1->text() + ", "  + ui->y1->text() ).toStdString().c_str() );
         cw->setVisible(true);
-        tilingToPoint.insert ( std::pair<TilingWidget *, Z3i::Point>(cw, Z3i::Point ( ui->x1->text().toInt(), ui->y1->text().toInt(),
-                                                                                 -ui->x1->text().toInt() - ui->y1->text().toInt()  ) ) );
+        tilingToPoint.insert ( std::pair<TilingWidget *, Z3i::Point>(cw, Z3i::Point ( ui->x1->text().toInt(),
+                                                                                      -ui->x1->text().toInt() - ui->y1->text().toInt(),
+                                                                                      ui->y1->text().toInt() ) ) );
 
     }
     else
@@ -92,7 +82,7 @@ void MainWindow::addPoints()
             st << (*it)[0] << ", " << (*it)[1];
             TilingWidget * cw = new TilingWidget ( QRect(350, 350, 50, 52), &torus,  st.str().c_str() );
             cw->setVisible(true);
-            tilingToPoint.insert ( std::pair<TilingWidget *, Z3i::Point> ( cw, Z3i::Point ( (*it)[0], (*it)[1], -(*it)[0] - (*it)[1] ) ) );
+            tilingToPoint.insert ( std::pair<TilingWidget *, Z3i::Point> ( cw, Z3i::Point ( (*it)[0], -(*it)[0] - (*it)[1], (*it)[1] ) ) );
         }
     }
     changedAngle( ui->doubleSpinBox->value() );
@@ -103,8 +93,8 @@ void MainWindow::changedOrigin()
     if ( ui->ox->text() == "" || ui->oy->text() == "" )
         return;
     origin[0] = ui->ox->text().toDouble();
-    origin[1] = ui->oy->text().toDouble();
-    origin[2] = - origin[0] - origin[1];
+    origin[2] = ui->oy->text().toDouble();
+    origin[1] = - origin[0] - origin[1];
     changedAngle( ui->doubleSpinBox->value() );
 }
 

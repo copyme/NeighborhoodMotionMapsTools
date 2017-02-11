@@ -13,15 +13,15 @@ public:
     static DGtal::PointVector<2, double> CartesianToHex ( const DGtal::PointVector<2, Type> & point )
     {
         return DGtal::PointVector<2, double>( point[0] * std::sqrt(3.)  + point[1] * std::sqrt(3.)/2.,
-                                              point[1] * 3./2. );
+                                              point[1] * (-3./2.) );
     }
 
     // Converst point of regular lattice to hexagonal
     template <typename Type >
     static DGtal::PointVector<2, double> HexToCartesian ( const DGtal::PointVector<2, Type> & point )
     {
-        return DGtal::PointVector<2, double>( point[0] * std::sqrt(3.)/3.  - point[1] * 1./3.,
-                                              point[1] * 2./3. );
+        return DGtal::PointVector<2, double>( point[0] * std::sqrt(3.)/3.  + point[1] * 1./3.,
+                                              point[1] * (-2./3.) );
     }
 
     template <typename Type >
