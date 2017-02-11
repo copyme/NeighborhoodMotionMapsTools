@@ -13,7 +13,6 @@ class Torus2D : public QWidget
     Q_OBJECT
 public:
     Torus2D(QRectF rec, QWidget *parent = 0);
-    void paintTrack( const std::vector<QPointF> & points );
 
 signals:
 

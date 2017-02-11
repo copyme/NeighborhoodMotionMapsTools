@@ -213,7 +213,7 @@
      <x>0</x>
      <y>0</y>
      <width>868</width>
-     <height>31</height>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -283,7 +283,7 @@
   </connection>
   <connection>
    <sender>actionSave</sender>
-   <signal>activated()</signal>
+   <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>saveTorus()</slot>
    <hints>

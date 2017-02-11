@@ -19,12 +19,6 @@ Torus2D::Torus2D(QRectF rec, QWidget *parent):
     m_angle = 0.1;
 }
 
-void Torus2D::paintTrack(const std::vector<QPointF> &points)
-{
-    pointsD = points;
-
-}
-
 void Torus2D::angleChanged(double angle)
 {
     m_cos = std::cos(angle);
@@ -35,13 +29,8 @@ void Torus2D::angleChanged(double angle)
 
 void Torus2D::colorChanged(RealPoint & point, TilingWidget *w)
 {
-
-    float widthHex = std::sqrt(3.)/2. * width();
     float L = width()/2.;
-
-    //Bug why we do not have to translate in y?
-    QPoint p ( std::round(point[0] * L + (width()/2. + ( width()/2. - widthHex/2.)/2.) - w->width()/2. ),
-              std::round(height() - (point[1] * L + height()/2. ) ) );
+    QPointF p ( std::round(point[0] * L + width()/2.), std::round(height() - (point[1] * L + height()/2. ) ) );
     w->setGeometry( QRect( std::round(p.x() - w->width()/2.) ,
                            std::round(p.y() - w->height()/2.) , w->width(),  w->height()) );
     update();
@@ -106,19 +95,6 @@ void Torus2D::paintEvent(QPaintEvent *)
     paintCriticalLinesHexes ( QPointF ( size().width() / 2. + ( -m_cos * m_sqrt3 / 2. + 3. / 2. * m_sin ) * size().width() / 2.,
                                         size().height() / 2. + ( -m_sin * m_sqrt3 / 2. - 3. / 2. * m_cos ) * size().height() / 2. ),
                               painter );
-
-
-    float widthHex = std::sqrt(3.)/2. * width();
-
-    QPen pen2(Qt::red, 1);
-    painter.setPen(pen2);
-    for (auto &point:pointsD)
-    {
-        QPoint p (std::round(point.x() * L + (width()/2. + ( width()/2. - widthHex/2.)/2. - 25)),
-                  std::round(height() - (point.y() * L + height()/2. )) );
-      painter.drawPoint(p);
-    }
-
 }
 
 QPointF Torus2D::hexCorners(const QPointF &center, float size, uint index, bool pointTopped)
