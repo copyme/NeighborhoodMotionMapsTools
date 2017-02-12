@@ -206,6 +206,25 @@
      </attribute>
     </widget>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>330</y>
+      <width>101</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Note that all the coordinates have to be given in the axial coordinate system. For instance, in the axial coordinate system the point (1,-1) corresponds to the point (sqrt(3)/2, 3/2) in the Cartesina coordinate system.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
