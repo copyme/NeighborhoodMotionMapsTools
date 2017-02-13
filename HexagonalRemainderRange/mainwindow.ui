@@ -144,7 +144,7 @@
      <double>999999999.000000000000000</double>
     </property>
     <property name="singleStep">
-     <double>0.001000000000000</double>
+     <double>0.010000000000000</double>
     </property>
     <property name="value">
      <double>0.000000000000000</double>
@@ -169,7 +169,7 @@
      <double>999999999.000000000000000</double>
     </property>
     <property name="singleStep">
-     <double>0.001000000000000</double>
+     <double>0.010000000000000</double>
     </property>
     <property name="value">
      <double>0.000000000000000</double>
@@ -212,17 +212,26 @@
       <x>750</x>
       <y>330</y>
       <width>101</width>
-      <height>291</height>
+      <height>321</height>
      </rect>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
     </property>
     <property name="text">
      <string>Note that all the coordinates have to be given in the axial coordinate system. For instance, in the axial coordinate system the point (1,-1) corresponds to the point (sqrt(3)/2, 3/2) in the Cartesina coordinate system.</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
+    </property>
+    <property name="margin">
+     <number>-1</number>
     </property>
    </widget>
   </widget>
@@ -232,7 +241,7 @@
      <x>0</x>
      <y>0</y>
      <width>868</width>
-     <height>30</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
