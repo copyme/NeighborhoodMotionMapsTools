@@ -210,7 +210,7 @@
     <property name="geometry">
      <rect>
       <x>750</x>
-      <y>330</y>
+      <y>370</y>
       <width>101</width>
       <height>321</height>
      </rect>
@@ -232,6 +232,19 @@
     </property>
     <property name="margin">
      <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBoxNonInj">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>330</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Non-injective</string>
     </property>
    </widget>
   </widget>

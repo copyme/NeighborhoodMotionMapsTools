@@ -17,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->doubleSpinBox, SIGNAL(valueChanged(double)),
             &torus, SLOT(angleChanged(double)));
+        connect(ui->checkBoxNonInj, SIGNAL(toggled(bool)),
+            &torus, SLOT(drawNonInjChanged(bool)));
 
     torus.setParent(ui->tab);
     //Coordinates in cube coordinate system system!!

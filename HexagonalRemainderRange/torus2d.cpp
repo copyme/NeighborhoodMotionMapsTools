@@ -17,6 +17,7 @@ Torus2D::Torus2D(QRectF rec, QWidget *parent):
     m_sin = 0.09983341; //0.1 rad
     m_sqrt3 = std::sqrt(3.);
     m_angle = 0.1;
+    m_nonInj = false;
 }
 
 void Torus2D::angleChanged(double angle)
@@ -34,6 +35,12 @@ void Torus2D::colorChanged(RealPoint & point, TilingWidget *w)
     w->setGeometry( QRect( std::round(p.x() - w->width()/2.) ,
                            std::round(p.y() - w->height()/2.) , w->width(),  w->height()) );
     update();
+}
+
+void Torus2D::drawNonInjChanged(bool status)
+{
+   m_nonInj = status;
+   update();
 }
 
 void Torus2D::paintEvent(QPaintEvent *)
@@ -96,6 +103,8 @@ void Torus2D::paintEvent(QPaintEvent *)
                                         size().height() / 2. + (m_sin * m_sqrt3 / 2. + 3. / 2. * m_cos) * size().height() / 2. ),
                               painter );
 
+    if (m_nonInj)
+        paintNonInjectiveZones(painter);
 }
 
 QPointF Torus2D::hexCorners(const QPointF &center, float size, uint index, bool pointTopped)
@@ -181,4 +190,31 @@ void Torus2D::paintCriticalLinesHexes(const QPointF &c, QPainter &painter)
 
     painter.drawPolygon ( poly[6] );
 
+}
+
+void Torus2D::paintNonInjectiveZones(QPainter &painter)
+{
+    QPolygonF poly;
+    poly << QPointF(  size().width() / 2. + m_sqrt3 * ( m_cos - 1. ) * size().width() / 2., size().height() / 2. - m_cos * size().width() / 2.)
+          << QPointF(  size().width() / 2., size().height() / 2. - size().width() / 2.)
+          << QPointF(  size().width() / 2. + ( -m_sqrt3/2. * (+ m_cos + m_sqrt3 * m_sin - 2.) ) * size().width() / 2.,
+                       size().height() / 2. - ( 0.5 * ( m_cos + m_sqrt3 * m_sin ) ) * size().width() / 2.)
+          << QPointF(  size().width() / 2. + ( 1/2. * (m_sqrt3 * m_cos - 3. * m_sin) ) * size().width() / 2.,
+                       size().height() / 2. - ( 0.5 * (3. * m_cos + m_sqrt3 * m_sin - 2.) ) * size().width() / 2.);
+
+    QBrush brush;
+    brush.setColor(Qt::black);
+    brush.setStyle(Qt::FDiagPattern);
+    QPainterPath path;
+    path.addPolygon(poly);
+    painter.fillPath(path, brush);
+    for (ushort i = 0; i < 6; i++)
+    {
+        QTransform t;
+        t.translate(width()/2., height()/2.);
+        t.rotate(60 * i);
+        t.translate(-width()/2., -height()/2.);
+        path.addPolygon(t.map(poly));
+        painter.fillPath(path, brush);
+    }
 }

@@ -20,14 +20,17 @@ public slots:
     void angleChanged(double angle);
     //! \todo generalization of type colorwidget
     void colorChanged(DGtal::Z2i::RealPoint & point, TilingWidget * w);
+    void drawNonInjChanged(bool status);
 
 protected:
     void paintEvent(QPaintEvent *);
 private:
     double m_cos, m_sin, m_sqrt3, m_angle;
+    bool m_nonInj;
     std::vector<QPointF> pointsD;
     // This method uses idea in which we consider different hexagons.
     void paintCriticalLinesHexes(const QPointF &center, QPainter &painter);
+    void paintNonInjectiveZones(QPainter &painter);
     QPointF hexCorners(const QPointF & center, float size, uint index, bool pointTopped = true);
 };
 
