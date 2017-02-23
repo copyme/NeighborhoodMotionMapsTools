@@ -121,7 +121,7 @@ void MainWindow::saveTorus()
     if (pos >= 0)
         saveExtension = saveFilename.mid(pos + 1);
 
-    if(!QPixmap::grabWidget(&torus).save(saveFilename, qPrintable(saveExtension)))
+    if(!torus.grab().save(saveFilename, qPrintable(saveExtension)))
     {
         QMessageBox::warning(this, "File could not be save", "ok", QMessageBox::Ok);
     }
