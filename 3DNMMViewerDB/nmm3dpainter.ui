@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NMM3DPainter</class>
+ <widget class="QWidget" name="NMM3DPainter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>807</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_6">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="bottomLayer">
+          <item row="2" column="0">
+           <widget class="Pixel" name="m1m1p1" native="true"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="Pixel" name="m1m1m1" native="true"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="Pixel" name="pm0m1p1" native="true"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="Pixel" name="p1m1p1" native="true"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="Pixel" name="p1m1pm0" native="true"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="Pixel" name="pm0m1m1" native="true"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="Pixel" name="p1m1m1" native="true"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="Pixel" name="m1m1pm0" native="true"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="Pixel" name="pm0m1pm0" native="true"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_2">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="midLayer">
+          <item row="1" column="0">
+           <widget class="Pixel" name="m1pm0pm0" native="true"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="Pixel" name="p1pm0m1" native="true"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="Pixel" name="p1pm0pm0" native="true"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="Pixel" name="p1pm0p1" native="true"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="Pixel" name="m1pm0p1" native="true"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="Pixel" name="pm0pm0p1" native="true"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="Pixel" name="pm0pm0m1" native="true"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="Pixel" name="m1pm0m1" native="true"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="Pixel" name="pm0pm0pm0" native="true"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_3">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="topLayer">
+          <item row="0" column="0">
+           <widget class="Pixel" name="m1p1m1" native="true"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="Pixel" name="m1p1pm0" native="true"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="Pixel" name="m1p1p1" native="true"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="Pixel" name="p1p1p1" native="true"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="Pixel" name="pm0p1pm0" native="true"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="Pixel" name="pm0p1p1" native="true"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="Pixel" name="p1p1pm0" native="true"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="Pixel" name="p1p1m1" native="true"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="Pixel" name="pm0p1m1" native="true"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Pixel</class>
+   <extends>QWidget</extends>
+   <header>pixel.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
