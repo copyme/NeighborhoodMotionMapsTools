@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     db = QSqlDatabase::addDatabase("QSQLITE");
     model = nullptr;
+    ui->widget->setParent(0);
+
     /*The order matters!*/
     /*N1*/
     mapleDict.push_back("[1, 0, 0]");
@@ -89,4 +91,6 @@ void MainWindow::sendSelection ( )
     }
 
     ui->widget->draw3DNMM ( data.cbegin(), data.cend() );
+    if (!ui->widget->isVisible())
+      ui->widget->showMaximized();
 }
