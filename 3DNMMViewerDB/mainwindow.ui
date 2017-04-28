@@ -106,7 +106,7 @@
   </connection>
   <connection>
    <sender>tableView</sender>
-   <signal>clicked(QModelIndex)</signal>
+   <signal>activated(QModelIndex)</signal>
    <receiver>MainWindow</receiver>
    <slot>sendSelection()</slot>
    <hints>
