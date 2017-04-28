@@ -13,6 +13,39 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     db = QSqlDatabase::addDatabase("QSQLITE");
     model = nullptr;
+    ui->widget->setParent(0);
+
+    /*The order matters!*/
+    /*N1*/
+    mapleDict.push_back("[1, 0, 0]");
+    mapleDict.push_back("[0, 1, 0]");
+    mapleDict.push_back("[0, 0, 1]");
+    mapleDict.push_back("[-1, 0, 0]");
+    mapleDict.push_back("[0, -1, 0]");
+    mapleDict.push_back("[0, 0, -1]");
+    mapleDict.push_back("[0, 0, 0]");
+    /*N2*/
+    mapleDict.push_back("[1, 1, 0]");
+    mapleDict.push_back("[1, 0, 1]");
+    mapleDict.push_back("[0, 1, 1]");
+    mapleDict.push_back("[-1, -1, 0]");
+    mapleDict.push_back("[-1, 0, -1]");
+    mapleDict.push_back("[0, -1, -1]");
+    mapleDict.push_back("[-1, 1, 0]");
+    mapleDict.push_back("[-1, 0, 1]");
+    mapleDict.push_back("[1, -1, 0]");
+    mapleDict.push_back("[1, 0, -1]");
+    mapleDict.push_back("[0, -1, 1]");
+    mapleDict.push_back("[0, 1, -1]");
+    /*N3*/
+    mapleDict.push_back("[1, 1, 1]");
+    mapleDict.push_back("[-1, 1, 1]");
+    mapleDict.push_back("[1, -1, 1]");
+    mapleDict.push_back("[1, 1, -1]");
+    mapleDict.push_back("[-1, -1, 1]");
+    mapleDict.push_back("[-1, 1, -1]");
+    mapleDict.push_back("[-1, -1, -1]");
+    mapleDict.push_back("[1, -1, -1]");
 }
 
 MainWindow::~MainWindow()
@@ -44,7 +77,7 @@ void MainWindow::loadDB()
 
 void MainWindow::sendSelection ( )
 {
-    std::vector<QString> data;
+    std::map<QString, QString> data;
     int id = ui->tableView->selectionModel()->currentIndex().row();
     QString NMM = model->record( id ).value( "NMM" ).toString();
     NMM.replace("], [", "]\t[");
@@ -54,8 +87,10 @@ void MainWindow::sendSelection ( )
     tokens.input(NMM.toStdString());
     for(int i = 0; i < tokens.getSize(); i++)
     {
-       data.push_back( QString( tokens.getValue( i ).c_str() ) );
+       data[mapleDict[i]] = QString( tokens.getValue( i ).c_str() );
     }
 
-    ui->widget->draw3DNMM ( data[0], data[1], data[2], data[3], data[4], data[5], data[6] );
+    ui->widget->draw3DNMM ( data.cbegin(), data.cend() );
+    if (!ui->widget->isVisible())
+      ui->widget->showMaximized();
 }

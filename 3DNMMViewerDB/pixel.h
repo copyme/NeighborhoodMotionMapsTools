@@ -14,7 +14,7 @@ class Pixel : public QWidget
 
 public:
     explicit Pixel(QWidget *parent = 0);
-    void setValue( QPalette & pallete );
+    void setValue(const QPalette & pallete );
     void clear();
     ~Pixel();
 

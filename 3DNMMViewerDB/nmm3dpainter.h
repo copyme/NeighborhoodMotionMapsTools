@@ -28,8 +28,10 @@ private:
     QPalette p1pm0pm0Pal;
     QPalette pm0p1pm0Pal;
 
+    std::map<QString, QPalette> colorMap;
+
 public slots:
-    void draw3DNMM( QString N1, QString N2, QString N3, QString N4, QString N5, QString N6, QString N7 );
+    void draw3DNMM( std::map<QString, QString>::const_iterator begin, std::map<QString, QString>::const_iterator end );
 };
 
 #endif // NMM3DPAINTER_H
