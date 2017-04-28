@@ -21,6 +21,7 @@ private:
     QString db_name;
     QSqlDatabase db;
     QSqlTableModel * model;
+    std::vector<QString> mapleDict;
 
 public slots:
     void loadDB();

@@ -1,6 +1,7 @@
 #include "nmm3dpainter.h"
 #include "ui_nmm3dpainter.h"
 #include <QPalette>
+#include <iostream>
 
 NMM3DPainter::NMM3DPainter(QWidget *parent) :
     QWidget(parent),
@@ -17,13 +18,13 @@ NMM3DPainter::NMM3DPainter(QWidget *parent) :
     QPalette pal( palette() );
     pal.setColor( QPalette::Background, Qt::white );
 
-    pm0m1pm0Pal.setColor( QPalette::Background, Qt::yellow );
-    pm0pm0pm0Pal.setColor( QPalette::Background, Qt::black );
-    pm0pm0m1Pal.setColor( QPalette::Background, Qt::cyan );
-    pm0pm0p1Pal.setColor( QPalette::Background, Qt::magenta );
-    m1pm0pm0Pal.setColor( QPalette::Background, QColor (255, 165, 0) );
-    p1pm0pm0Pal.setColor( QPalette::Background, Qt::green );
-    pm0p1pm0Pal.setColor( QPalette::Background, QColor (128, 0, 128) );
+    colorMap["[1, 0, 0]"] =QPalette(Qt::green);
+    colorMap["[0, 1, 0]"] =QPalette(QColor (128, 0, 128));
+    colorMap["[0, 0, 1]"] =QPalette(Qt::magenta);
+    colorMap["[-1, 0, 0]"] =QPalette(QColor (255, 165, 0));
+    colorMap["[0, -1, 0]"] =QPalette(Qt::yellow);
+    colorMap["[0, 0, -1]"] =QPalette(Qt::cyan);
+    colorMap["[0, 0, 0]"] =QPalette(Qt::black);
 
     // bottom
     pixels.insert ( std::make_pair ( QString ( "[-1, -1, -1]" ), ui->m1m1m1 ) );
@@ -61,16 +62,8 @@ NMM3DPainter::NMM3DPainter(QWidget *parent) :
 
     for ( auto &it:pixels ) it.second->clear();
 
-    // bottom
-    ui->pm0m1pm0->setValue ( pm0m1pm0Pal );
-    // mid
-    ui->pm0pm0m1->setValue ( pm0pm0m1Pal );
-    ui->pm0pm0p1->setValue ( pm0pm0p1Pal );
-    ui->pm0pm0pm0->setValue ( pm0pm0pm0Pal );
-    ui->m1pm0pm0->setValue ( m1pm0pm0Pal );
-    ui->p1pm0pm0->setValue ( p1pm0pm0Pal );
-    // top
-    ui->pm0p1pm0->setValue ( pm0p1pm0Pal );
+    for (auto it = colorMap.cbegin(); it != colorMap.cend(); it++)
+       pixels[it->first]->setValue(it->second);
 }
 
 NMM3DPainter::~NMM3DPainter()
@@ -78,43 +71,11 @@ NMM3DPainter::~NMM3DPainter()
     delete ui;
 }
 
-void NMM3DPainter::draw3DNMM(QString N1, QString N2, QString N3, QString N4, QString N5, QString N6, QString N7)
+void NMM3DPainter::draw3DNMM(std::map<QString, QString>::const_iterator begin, std::map<QString, QString>::const_iterator end)
 {
     for ( auto &it:pixels )
         it.second->clear();
 
-    auto it = pixels.find ( N7 );
-    if ( it == pixels.end() )
-        throw std::runtime_error ( "Unrecognized 3D NMM." );
-    it->second->setValue ( pm0pm0pm0Pal );
-
-    it = pixels.find ( N1 );
-    if ( it == pixels.end() )
-        throw std::runtime_error ( "Unrecognized 3D NMM." );
-    it->second->setValue ( p1pm0pm0Pal );
-
-    it = pixels.find ( N2 );
-    if ( it == pixels.end() )
-        throw std::runtime_error ( "Unrecognized 3D NMM." );
-    it->second->setValue ( pm0p1pm0Pal );
-
-    it = pixels.find ( N3 );
-    if ( it == pixels.end() )
-        throw std::runtime_error ( "Unrecognized 3D NMM." );
-    it->second->setValue ( pm0pm0p1Pal );
-
-    it = pixels.find ( N4 );
-    if ( it == pixels.end() )
-        throw std::runtime_error ( "Unrecognized 3D NMM." );
-    it->second->setValue ( m1pm0pm0Pal );
-
-    it = pixels.find ( N5 );
-    if ( it == pixels.end() )
-        throw std::runtime_error ( "Unrecognized 3D NMM." );
-    it->second->setValue ( pm0m1pm0Pal );
-
-    it = pixels.find ( N6 );
-    if ( it == pixels.end() )
-        throw std::runtime_error ( "Unrecognized 3D NMM." );
-    it->second->setValue ( pm0pm0m1Pal );
+    for (auto it = begin; it != end; it++)
+       pixels[it->second]->setValue(colorMap[it->first]);
 }

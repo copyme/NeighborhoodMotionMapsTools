@@ -14,7 +14,7 @@ Pixel::Pixel(QWidget *parent) :
     index = 0;
 }
 
-void Pixel::setValue(QPalette &pallete)
+void Pixel::setValue(const QPalette &pallete)
 {
     if (index == 0)
     {

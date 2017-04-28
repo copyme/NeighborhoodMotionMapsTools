@@ -20,6 +20,85 @@
       <number>6</number>
      </property>
      <item>
+      <widget class="QFrame" name="frame_4">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="bottomLayer_2">
+          <item row="4" column="3">
+           <widget class="Pixel" name="widget_9" native="true"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="Pixel" name="m1m1pm0_2" native="true"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="Pixel" name="m1m1m1_2" native="true"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="Pixel" name="widget" native="true"/>
+          </item>
+          <item row="1" column="3">
+           <widget class="Pixel" name="p1m1m1_2" native="true"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="Pixel" name="widget_4" native="true"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="Pixel" name="pm0m1m1_2" native="true"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="Pixel" name="widget_2" native="true"/>
+          </item>
+          <item row="0" column="3">
+           <widget class="Pixel" name="widget_3" native="true"/>
+          </item>
+          <item row="2" column="3">
+           <widget class="Pixel" name="p1m1pm0_2" native="true"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="Pixel" name="m1m1p1_2" native="true"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="Pixel" name="pm0m1pm0_2" native="true"/>
+          </item>
+          <item row="3" column="3">
+           <widget class="Pixel" name="p1m1p1_2" native="true"/>
+          </item>
+          <item row="3" column="2">
+           <widget class="Pixel" name="pm0m1p1_2" native="true"/>
+          </item>
+          <item row="4" column="2">
+           <widget class="Pixel" name="widget_8" native="true"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="Pixel" name="widget_7" native="true"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="Pixel" name="widget_5" native="true"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="Pixel" name="widget_6" native="true"/>
+          </item>
+          <item row="1" column="4">
+           <widget class="Pixel" name="widget_10" native="true"/>
+          </item>
+          <item row="2" column="4">
+           <widget class="Pixel" name="widget_11" native="true"/>
+          </item>
+          <item row="3" column="4">
+           <widget class="Pixel" name="widget_12" native="true"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
       <widget class="QFrame" name="frame">
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -30,32 +109,80 @@
        <layout class="QGridLayout" name="gridLayout_7">
         <item row="0" column="0">
          <layout class="QGridLayout" name="bottomLayer">
-          <item row="2" column="0">
-           <widget class="Pixel" name="m1m1p1" native="true"/>
-          </item>
-          <item row="0" column="0">
-           <widget class="Pixel" name="m1m1m1" native="true"/>
-          </item>
-          <item row="2" column="1">
-           <widget class="Pixel" name="pm0m1p1" native="true"/>
-          </item>
-          <item row="2" column="2">
-           <widget class="Pixel" name="p1m1p1" native="true"/>
-          </item>
-          <item row="1" column="2">
-           <widget class="Pixel" name="p1m1pm0" native="true"/>
-          </item>
-          <item row="0" column="1">
-           <widget class="Pixel" name="pm0m1m1" native="true"/>
-          </item>
-          <item row="0" column="2">
+          <item row="1" column="3">
            <widget class="Pixel" name="p1m1m1" native="true"/>
           </item>
           <item row="1" column="0">
+           <widget class="Pixel" name="widget_13" native="true"/>
+          </item>
+          <item row="3" column="3">
+           <widget class="Pixel" name="p1m1p1" native="true"/>
+          </item>
+          <item row="3" column="2">
+           <widget class="Pixel" name="pm0m1p1" native="true"/>
+          </item>
+          <item row="2" column="1">
            <widget class="Pixel" name="m1m1pm0" native="true"/>
           </item>
+          <item row="1" column="2">
+           <widget class="Pixel" name="pm0m1m1" native="true"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="Pixel" name="widget_19" native="true"/>
+          </item>
           <item row="1" column="1">
+           <widget class="Pixel" name="m1m1m1" native="true"/>
+          </item>
+          <item row="2" column="3">
+           <widget class="Pixel" name="p1m1pm0" native="true"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="Pixel" name="m1m1p1" native="true"/>
+          </item>
+          <item row="2" column="2">
            <widget class="Pixel" name="pm0m1pm0" native="true"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="Pixel" name="widget_15" native="true"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="Pixel" name="widget_14" native="true"/>
+          </item>
+          <item row="2" column="4">
+           <widget class="Pixel" name="widget_17" native="true"/>
+          </item>
+          <item row="3" column="4">
+           <widget class="Pixel" name="widget_18" native="true"/>
+          </item>
+          <item row="1" column="4">
+           <widget class="Pixel" name="widget_16" native="true"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="Pixel" name="widget_21" native="true"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="Pixel" name="widget_20" native="true"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="Pixel" name="widget_23" native="true"/>
+          </item>
+          <item row="0" column="3">
+           <widget class="Pixel" name="widget_22" native="true"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="Pixel" name="widget_24" native="true"/>
+          </item>
+          <item row="4" column="2">
+           <widget class="Pixel" name="widget_25" native="true"/>
+          </item>
+          <item row="4" column="3">
+           <widget class="Pixel" name="widget_26" native="true"/>
+          </item>
+          <item row="4" column="4">
+           <widget class="Pixel" name="widget_27" native="true"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="Pixel" name="widget_28" native="true"/>
           </item>
          </layout>
         </item>
@@ -73,32 +200,80 @@
        <layout class="QGridLayout" name="gridLayout_8">
         <item row="0" column="0">
          <layout class="QGridLayout" name="midLayer">
-          <item row="1" column="0">
+          <item row="2" column="1">
            <widget class="Pixel" name="m1pm0pm0" native="true"/>
           </item>
-          <item row="0" column="2">
+          <item row="1" column="3">
            <widget class="Pixel" name="p1pm0m1" native="true"/>
           </item>
-          <item row="1" column="2">
+          <item row="2" column="3">
            <widget class="Pixel" name="p1pm0pm0" native="true"/>
           </item>
-          <item row="2" column="2">
+          <item row="3" column="3">
            <widget class="Pixel" name="p1pm0p1" native="true"/>
           </item>
-          <item row="2" column="0">
+          <item row="3" column="1">
            <widget class="Pixel" name="m1pm0p1" native="true"/>
           </item>
-          <item row="2" column="1">
+          <item row="3" column="2">
            <widget class="Pixel" name="pm0pm0p1" native="true"/>
           </item>
-          <item row="0" column="1">
+          <item row="1" column="2">
            <widget class="Pixel" name="pm0pm0m1" native="true"/>
           </item>
-          <item row="0" column="0">
+          <item row="1" column="1">
            <widget class="Pixel" name="m1pm0m1" native="true"/>
           </item>
-          <item row="1" column="1">
+          <item row="2" column="2">
            <widget class="Pixel" name="pm0pm0pm0" native="true"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="Pixel" name="widget_29" native="true"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="Pixel" name="widget_36" native="true"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="Pixel" name="widget_30" native="true"/>
+          </item>
+          <item row="0" column="3">
+           <widget class="Pixel" name="widget_38" native="true"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="Pixel" name="widget_35" native="true"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="Pixel" name="widget_37" native="true"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="Pixel" name="widget_31" native="true"/>
+          </item>
+          <item row="1" column="4">
+           <widget class="Pixel" name="widget_32" native="true"/>
+          </item>
+          <item row="2" column="4">
+           <widget class="Pixel" name="widget_33" native="true"/>
+          </item>
+          <item row="3" column="4">
+           <widget class="Pixel" name="widget_34" native="true"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="Pixel" name="widget_39" native="true"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="Pixel" name="widget_40" native="true"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="Pixel" name="widget_41" native="true"/>
+          </item>
+          <item row="4" column="2">
+           <widget class="Pixel" name="widget_42" native="true"/>
+          </item>
+          <item row="4" column="3">
+           <widget class="Pixel" name="widget_43" native="true"/>
+          </item>
+          <item row="4" column="4">
+           <widget class="Pixel" name="widget_44" native="true"/>
           </item>
          </layout>
         </item>
@@ -116,32 +291,159 @@
        <layout class="QGridLayout" name="gridLayout_9">
         <item row="0" column="0">
          <layout class="QGridLayout" name="topLayer">
-          <item row="0" column="0">
-           <widget class="Pixel" name="m1p1m1" native="true"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="Pixel" name="m1p1pm0" native="true"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="Pixel" name="m1p1p1" native="true"/>
-          </item>
-          <item row="2" column="2">
-           <widget class="Pixel" name="p1p1p1" native="true"/>
+          <item row="1" column="2">
+           <widget class="Pixel" name="pm0p1m1" native="true"/>
           </item>
           <item row="1" column="1">
-           <widget class="Pixel" name="pm0p1pm0" native="true"/>
+           <widget class="Pixel" name="m1p1m1" native="true"/>
           </item>
           <item row="2" column="1">
+           <widget class="Pixel" name="m1p1pm0" native="true"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="Pixel" name="m1p1p1" native="true"/>
+          </item>
+          <item row="3" column="3">
+           <widget class="Pixel" name="p1p1p1" native="true"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="Pixel" name="pm0p1pm0" native="true"/>
+          </item>
+          <item row="3" column="2">
            <widget class="Pixel" name="pm0p1p1" native="true"/>
           </item>
-          <item row="1" column="2">
+          <item row="2" column="3">
            <widget class="Pixel" name="p1p1pm0" native="true"/>
           </item>
-          <item row="0" column="2">
+          <item row="1" column="3">
            <widget class="Pixel" name="p1p1m1" native="true"/>
           </item>
+          <item row="2" column="0">
+           <widget class="Pixel" name="widget_45" native="true"/>
+          </item>
           <item row="0" column="1">
-           <widget class="Pixel" name="pm0p1m1" native="true"/>
+           <widget class="Pixel" name="widget_51" native="true"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="Pixel" name="widget_47" native="true"/>
+          </item>
+          <item row="2" column="4">
+           <widget class="Pixel" name="widget_49" native="true"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="Pixel" name="widget_46" native="true"/>
+          </item>
+          <item row="3" column="4">
+           <widget class="Pixel" name="widget_50" native="true"/>
+          </item>
+          <item row="1" column="4">
+           <widget class="Pixel" name="widget_48" native="true"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="Pixel" name="widget_52" native="true"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="Pixel" name="widget_53" native="true"/>
+          </item>
+          <item row="0" column="3">
+           <widget class="Pixel" name="widget_54" native="true"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="Pixel" name="widget_55" native="true"/>
+          </item>
+          <item row="4" column="2">
+           <widget class="Pixel" name="widget_56" native="true"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="Pixel" name="widget_57" native="true"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="Pixel" name="widget_58" native="true"/>
+          </item>
+          <item row="4" column="3">
+           <widget class="Pixel" name="widget_59" native="true"/>
+          </item>
+          <item row="4" column="4">
+           <widget class="Pixel" name="widget_60" native="true"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_5">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="topLayer_2">
+          <item row="1" column="1">
+           <widget class="Pixel" name="m1p1m1_2" native="true"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="Pixel" name="m1p1p1_2" native="true"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="Pixel" name="m1p1pm0_2" native="true"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="Pixel" name="pm0p1m1_2" native="true"/>
+          </item>
+          <item row="1" column="3">
+           <widget class="Pixel" name="p1p1m1_2" native="true"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="Pixel" name="pm0p1pm0_2" native="true"/>
+          </item>
+          <item row="3" column="2">
+           <widget class="Pixel" name="pm0p1p1_2" native="true"/>
+          </item>
+          <item row="3" column="3">
+           <widget class="Pixel" name="p1p1p1_2" native="true"/>
+          </item>
+          <item row="2" column="3">
+           <widget class="Pixel" name="p1p1pm0_2" native="true"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="Pixel" name="widget_61" native="true"/>
+          </item>
+          <item row="0" column="3">
+           <widget class="Pixel" name="widget_69" native="true"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="Pixel" name="widget_63" native="true"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="Pixel" name="widget_62" native="true"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="Pixel" name="widget_67" native="true"/>
+          </item>
+          <item row="1" column="4">
+           <widget class="Pixel" name="widget_64" native="true"/>
+          </item>
+          <item row="2" column="4">
+           <widget class="Pixel" name="widget_65" native="true"/>
+          </item>
+          <item row="3" column="4">
+           <widget class="Pixel" name="widget_66" native="true"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="Pixel" name="widget_68" native="true"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="Pixel" name="widget_70" native="true"/>
+          </item>
+          <item row="4" column="2">
+           <widget class="Pixel" name="widget_71" native="true"/>
+          </item>
+          <item row="4" column="3">
+           <widget class="Pixel" name="widget_72" native="true"/>
           </item>
          </layout>
         </item>
