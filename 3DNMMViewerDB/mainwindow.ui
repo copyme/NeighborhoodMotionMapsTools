@@ -35,7 +35,7 @@
          <enum>QAbstractItemView::SelectItems</enum>
         </property>
         <attribute name="horizontalHeaderVisible">
-         <bool>true</bool>
+         <bool>false</bool>
         </attribute>
         <attribute name="verticalHeaderVisible">
          <bool>false</bool>
@@ -64,7 +64,14 @@
     </property>
     <addaction name="actionOpen"/>
    </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionSlice_mapping"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
   </widget>
   <action name="actionOpen">
    <property name="text">
@@ -74,6 +81,11 @@
   <action name="actionSave">
    <property name="text">
     <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="actionSlice_mapping">
+   <property name="text">
+    <string>Slice mapping</string>
    </property>
   </action>
  </widget>
@@ -120,9 +132,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionSlice_mapping</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showMapping()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>loadDB()</slot>
   <slot>sendSelection()</slot>
+  <slot>showMapping()</slot>
  </slots>
 </ui>

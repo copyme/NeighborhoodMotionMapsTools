@@ -1,0 +1,370 @@
+﻿\begin{tikzpicture}
+  \DrawSquareCentered{0}{0}{2}
+  \DrawSquareCentered{-1}{0}{2}
+  \DrawSquareCentered{-2}{0}{2}
+  \DrawSquareCentered{1}{0}{2}
+  \DrawSquareCentered{2}{0}{2}
+
+  \DrawSquareCentered{0}{-1}{2}
+  \DrawSquareCentered{-1}{-1}{2}
+  \DrawSquareCentered{-2}{-1}{2}
+  \DrawSquareCentered{1}{-1}{2}
+  \DrawSquareCentered{2}{-1}{2}
+
+  \DrawSquareCentered{0}{-2}{2}
+  \DrawSquareCentered{-1}{-2}{2}
+  \DrawSquareCentered{1}{-2}{2}
+
+  \DrawSquareCentered{0}{1}{2}
+  \DrawSquareCentered{-1}{1}{2}
+  \DrawSquareCentered{-2}{1}{2}
+  \DrawSquareCentered{1}{1}{2}
+  \DrawSquareCentered{2}{1}{2}
+
+  \DrawSquareCentered{0}{2}{2}
+  \DrawSquareCentered{-1}{2}{2}
+  \DrawSquareCentered{1}{2}{2}
+
+\begin{scope}[scale=2]
+  \node (B20) at (0,0) {$(0,-2,0)$};
+  \node (B20) at (-1,0) {$(-1,-2,0)$};
+  \node (B20) at (-2,0) {$(-2,-2,0)$};
+  \node (B20) at (1,0) {$(1,-2,0)$};
+  \node (B20) at (2,0) {$(2,-2,0)$};
+
+  \node (B20) at (0,-1) {$(0,-2,1)$};
+  \node (B20) at (-1,-1) {$(-1,-2,1)$};
+  \node (B20) at (-2,-1) {$(-2,-2,1)$};
+  \node (B20) at (1,-1) {$(1,-2,1)$};
+  \node (B20) at (2,-1) {$(2,-2,1)$};
+
+  \node (B20) at (0,-2) {$(0,-2,2)$};
+  \node (B20) at (-1,-2) {$(-1,-2,2)$};
+  \node (B20) at (1,-2) {$(1,-2,2)$};
+
+  \node (B20) at (0,1) {$(0,-2,-1)$};
+  \node (B20) at (-1,1) {$(-1,-2,-1)$};
+  \node (B20) at (-2,1) {$(-2,-2,-1)$};
+  \node (B20) at (1,1) {$(1,-2,-1)$};
+  \node (B20) at (2,1) {$(2,-2,-1)$};
+
+  \node (B20) at (0,2) {$(0,-2,-2)$};
+  \node (B20) at (-1,2) {$(-1,-2,-2)$};
+  \node (B20) at (1,2) {$(1,-2,-2)$};
+\end{scope}
+
+\end{tikzpicture}
+
+\quad
+
+\begin{tikzpicture}
+\begin{scope}[fill={rgb,255:red,0;green,95;blue,57}]
+  \DrawFillSquareCentered{0}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,67;green,0;blue,44}]
+  \DrawFillSquareCentered{-1}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,106;green,130;blue,108}]
+  \DrawFillSquareCentered{1}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,194;green,140;blue,159}]
+  \DrawFillSquareCentered{0}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,255;green,2;blue,157}]
+  \DrawFillSquareCentered{-1}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,255;green,0;blue,0}]
+  \DrawFillSquareCentered{1}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,107;green,104;blue,130}]
+  \DrawFillSquareCentered{0}{1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,255;green,116;blue,163}]
+  \DrawFillSquareCentered{-1}{1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,150;green,138;blue,232}]
+  \DrawFillSquareCentered{1}{1}{2}
+\end{scope}
+
+  \DrawSquareCentered{-2}{0}{2}
+  \DrawSquareCentered{2}{0}{2}
+  \DrawSquareCentered{-2}{-1}{2}
+  \DrawSquareCentered{2}{-1}{2}
+
+  \DrawSquareCentered{0}{-2}{2}
+  \DrawSquareCentered{-1}{-2}{2}
+  \DrawSquareCentered{1}{-2}{2}
+  \DrawSquareCentered{2}{-2}{2}
+  \DrawSquareCentered{-2}{-2}{2}
+
+  \DrawSquareCentered{-2}{1}{2}
+  \DrawSquareCentered{2}{1}{2}
+
+  \DrawSquareCentered{0}{2}{2}
+  \DrawSquareCentered{-1}{2}{2}
+  \DrawSquareCentered{1}{2}{2}
+  \DrawSquareCentered{2}{2}{2}
+  \DrawSquareCentered{-2}{2}{2}
+
+\begin{scope}[scale=2]
+  \node[color=white] (B20) at (0,0) {$(0,-1,0)$};
+  \node[color=white] (B20) at (-1,0) {$(-1,-1,0)$};
+  \node (B20) at (-2,0) {$(-2,-1,0)$};
+  \node[color=white] (B20) at (1,0) {$(1,-1,0)$};
+  \node (B20) at (2,0) {$(2,-1,0)$};
+
+  \node (B20) at (0,-1) {$(0,-1,1)$};
+  \node (B20) at (-1,-1) {$(-1,-1,1)$};
+  \node (B20) at (-2,-1) {$(-2,-1,1)$};
+  \node (B20) at (1,-1) {$(1,-1,1)$};
+  \node (B20) at (2,-1) {$(2,-1,1)$};
+
+  \node (B20) at (0,-2) {$(0,-1,2)$};
+  \node (B20) at (-1,-2) {$(-1,-1,2)$};
+  \node (B20) at (1,-2) {$(1,-1,2)$};
+  \node (B20) at (2,-2) {$(2,-1,2)$};
+  \node (B20) at (-2,-2) {$(-2,-1,2)$};
+
+  \node[color=white] (B20) at (0,1) {$(0,-1,-1)$};
+  \node (B20) at (-1,1) {$(-1,-1,-1)$};
+  \node (B20) at (-2,1) {$(-2,-1,-1)$};
+  \node (B20) at (1,1) {$(1,-1,-1)$};
+  \node (B20) at (2,1) {$(2,-1,-1)$};
+
+  \node (B20) at (0,2) {$(0,-1,-2)$};
+  \node (B20) at (-1,2) {$(-1,-1,-2)$};
+  \node (B20) at (1,2) {$(1,-1,-2)$};
+  \node (B20) at (2,2) {$(2,-1,-2)$};
+  \node (B20) at (-2,2) {$(-2,-1,-2)$};
+\end{scope}
+
+\end{tikzpicture}
+
+\quad
+
+\begin{tikzpicture}
+\begin{scope}[fill=black]
+  \DrawFillSquareCentered{0}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,14;green,76;blue,161}]
+  \DrawFillSquareCentered{-1}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,213;green,255;blue,0}]
+  \DrawFillSquareCentered{1}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,158;green,0;blue,142}]
+  \DrawFillSquareCentered{0}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,0;green,125;blue,181}]
+  \DrawFillSquareCentered{-1}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,255;green,147;blue,126}]
+  \DrawFillSquareCentered{1}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,0;green,255;blue,0}]
+  \DrawFillSquareCentered{0}{1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,145;green,208;blue,203}]
+  \DrawFillSquareCentered{-1}{1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,0;green,147;blue,126}]
+  \DrawFillSquareCentered{1}{1}{2}
+\end{scope}
+
+  \DrawSquareCentered{-2}{0}{2}
+  \DrawSquareCentered{2}{0}{2}
+  \DrawSquareCentered{-2}{-1}{2}
+  \DrawSquareCentered{2}{-1}{2}
+
+  \DrawSquareCentered{0}{-2}{2}
+  \DrawSquareCentered{-1}{-2}{2}
+  \DrawSquareCentered{1}{-2}{2}
+  \DrawSquareCentered{2}{-2}{2}
+  \DrawSquareCentered{-2}{-2}{2}
+
+  \DrawSquareCentered{-2}{1}{2}
+  \DrawSquareCentered{2}{1}{2}
+
+  \DrawSquareCentered{0}{2}{2}
+  \DrawSquareCentered{-1}{2}{2}
+  \DrawSquareCentered{1}{2}{2}
+  \DrawSquareCentered{2}{2}{2}
+  \DrawSquareCentered{-2}{2}{2}
+
+\begin{scope}[scale=2]
+  \node[color=white] (B20) at (0,0) {$(0,0,0)$};
+  \node[color=white] (B20) at (-1,0) {$(-1,0,0)$};
+  \node (B20) at (-2,0) {$(-2,0,0)$};
+  \node (B20) at (1,0) {$(1,0,0)$};
+  \node (B20) at (2,0) {$(2,0,0)$};
+
+  \node (B20) at (0,-1) {$(0,0,1)$};
+  \node (B20) at (-1,-1) {$(-1,0,1)$};
+  \node (B20) at (-2,-1) {$(-2,0,1)$};
+  \node (B20) at (1,-1) {$(1,0,1)$};
+  \node (B20) at (2,-1) {$(2,0,1)$};
+
+  \node (B20) at (0,-2) {$(0,0,2)$};
+  \node (B20) at (-1,-2) {$(-1,0,2)$};
+  \node (B20) at (1,-2) {$(1,0,2)$};
+  \node (B20) at (2,-2) {$(2,0,2)$};
+  \node (B20) at (-2,-2) {$(-2,0,2)$};
+
+  \node (B20) at (0,1) {$(0,0,-1)$};
+  \node (B20) at (-1,1) {$(-1,0,-1)$};
+  \node (B20) at (-2,1) {$(-2,0,-1)$};
+  \node (B20) at (1,1) {$(1,0,-1)$};
+  \node (B20) at (2,1) {$(2,0,-1)$};
+
+  \node (B20) at (0,2) {$(0,0,-2)$};
+  \node (B20) at (-1,2) {$(-1,0,-2)$};
+  \node (B20) at (1,2) {$(1,0,-2)$};
+  \node (B20) at (2,2) {$(2,0,-2)$};
+  \node (B20) at (-2,2) {$(-2,0,-2)$};
+\end{scope}
+
+\end{tikzpicture}
+
+\quad
+
+\begin{tikzpicture}
+\begin{scope}[fill={rgb,255:red,120;green,150;blue,50}]
+  \DrawFillSquareCentered{0}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,0;green,0;blue,255}]
+  \DrawFillSquareCentered{-1}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,149;green,0;blue,58}]
+  \DrawFillSquareCentered{1}{0}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,130;green,130;blue,130}]
+  \DrawFillSquareCentered{0}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,955;green,173;blue,78}]
+  \DrawFillSquareCentered{-1}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,0;green,143;blue,156}]
+  \DrawFillSquareCentered{1}{-1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,190;green,153;blue,112}]
+  \DrawFillSquareCentered{0}{1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,104;green,61;blue,59}]
+  \DrawFillSquareCentered{-1}{1}{2}
+\end{scope}
+\begin{scope}[fill={rgb,255:red,255;green,0;blue,246}]
+  \DrawFillSquareCentered{1}{1}{2}
+\end{scope}
+
+  \DrawSquareCentered{-2}{0}{2}
+  \DrawSquareCentered{2}{0}{2}
+  \DrawSquareCentered{-2}{-1}{2}
+  \DrawSquareCentered{2}{-1}{2}
+
+  \DrawSquareCentered{0}{-2}{2}
+  \DrawSquareCentered{-1}{-2}{2}
+  \DrawSquareCentered{1}{-2}{2}
+  \DrawSquareCentered{2}{-2}{2}
+  \DrawSquareCentered{-2}{-2}{2}
+
+  \DrawSquareCentered{-2}{1}{2}
+  \DrawSquareCentered{2}{1}{2}
+
+  \DrawSquareCentered{0}{2}{2}
+  \DrawSquareCentered{-1}{2}{2}
+  \DrawSquareCentered{1}{2}{2}
+  \DrawSquareCentered{2}{2}{2}
+  \DrawSquareCentered{-2}{2}{2}
+
+\begin{scope}[scale=2]
+  \node (B20) at (0,0) {$(0,1,0)$};
+  \node[color=white] (B20) at (-1,0) {$(-1,1,0)$};
+  \node (B20) at (-2,0) {$(-2,1,0)$};
+  \node[color=white] (B20) at (1,0) {$(1,1,0)$};
+  \node (B20) at (2,0) {$(2,1,0)$};
+
+  \node (B20) at (0,-1) {$(0,1,1)$};
+  \node (B20) at (-1,-1) {$(-1,1,1)$};
+  \node (B20) at (-2,-1) {$(-2,1,1)$};
+  \node (B20) at (1,-1) {$(1,1,1)$};
+  \node (B20) at (2,-1) {$(2,1,1)$};
+
+  \node (B20) at (0,-2) {$(0,1,2)$};
+  \node (B20) at (-1,-2) {$(-1,1,2)$};
+  \node (B20) at (1,-2) {$(1,1,2)$};
+  \node (B20) at (2,-2) {$(2,1,2)$};
+  \node (B20) at (-2,-2) {$(-2,1,2)$};
+
+  \node (B20) at (0,1) {$(0,1,-1)$};
+  \node[color=white] (B20) at (-1,1) {$(-1,1,-1)$};
+  \node (B20) at (-2,1) {$(-2,1,-1)$};
+  \node (B20) at (1,1) {$(1,1,-1)$};
+  \node (B20) at (2,1) {$(2,1,-1)$};
+
+  \node (B20) at (0,2) {$(0,1,-2)$};
+  \node (B20) at (-1,2) {$(-1,1,-2)$};
+  \node (B20) at (1,2) {$(1,1,-2)$};
+  \node (B20) at (2,2) {$(2,1,-2)$};
+  \node (B20) at (-2,2) {$(-2,1,-2)$};
+\end{scope}
+
+\end{tikzpicture}
+
+\quad
+
+\begin{tikzpicture}
+  \DrawSquareCentered{0}{0}{2}
+  \DrawSquareCentered{-1}{0}{2}
+  \DrawSquareCentered{-2}{0}{2}
+  \DrawSquareCentered{1}{0}{2}
+  \DrawSquareCentered{2}{0}{2}
+
+  \DrawSquareCentered{0}{-1}{2}
+  \DrawSquareCentered{-1}{-1}{2}
+  \DrawSquareCentered{-2}{-1}{2}
+  \DrawSquareCentered{1}{-1}{2}
+  \DrawSquareCentered{2}{-1}{2}
+
+  \DrawSquareCentered{0}{-2}{2}
+  \DrawSquareCentered{-1}{-2}{2}
+  \DrawSquareCentered{1}{-2}{2}
+
+  \DrawSquareCentered{0}{1}{2}
+  \DrawSquareCentered{-1}{1}{2}
+  \DrawSquareCentered{-2}{1}{2}
+  \DrawSquareCentered{1}{1}{2}
+  \DrawSquareCentered{2}{1}{2}
+
+  \DrawSquareCentered{0}{2}{2}
+  \DrawSquareCentered{-1}{2}{2}
+  \DrawSquareCentered{1}{2}{2}
+
+\begin{scope}[scale=2]
+  \node (B20) at (0,0) {$(0,2,0)$};
+  \node (B20) at (-1,0) {$(-1,2,0)$};
+  \node (B20) at (-2,0) {$(-2,2,0)$};
+  \node (B20) at (1,0) {$(1,2,0)$};
+  \node (B20) at (2,0) {$(2,2,0)$};
+
+  \node (B20) at (0,-1) {$(0,2,1)$};
+  \node (B20) at (-1,-1) {$(-1,2,1)$};
+  \node (B20) at (-2,-1) {$(-2,2,1)$};
+  \node (B20) at (1,-1) {$(1,2,1)$};
+  \node (B20) at (2,-1) {$(2,2,1)$};
+
+  \node (B20) at (0,-2) {$(0,2,2)$};
+  \node (B20) at (-1,-2) {$(-1,2,2)$};
+  \node (B20) at (1,-2) {$(1,2,2)$};
+
+  \node (B20) at (0,1) {$(0,2,-1)$};
+  \node (B20) at (-1,1) {$(-1,2,-1)$};
+  \node (B20) at (-2,1) {$(-2,2,-1)$};
+  \node (B20) at (1,1) {$(1,2,-1)$};
+  \node (B20) at (2,1) {$(2,2,-1)$};
+
+  \node (B20) at (0,2) {$(0,2,-2)$};
+  \node (B20) at (-1,2) {$(-1,2,-2)$};
+  \node (B20) at (1,2) {$(1,2,-2)$};
+\end{scope}
+
+\end{tikzpicture}

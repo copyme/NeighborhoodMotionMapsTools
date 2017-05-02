@@ -1,10 +1,8 @@
+#include <QFileDialog>
+#include <QDesktopServices>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <fstream>
-#include <istream>
-#include <QFileDialog>
 #include "CSVExtractor.h"
-#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -92,5 +90,10 @@ void MainWindow::sendSelection ( )
 
     ui->widget->draw3DNMM ( data.cbegin(), data.cend() );
     if (!ui->widget->isVisible())
-      ui->widget->showMaximized();
+        ui->widget->showMaximized();
+}
+
+void MainWindow::showMapping()
+{
+    QDesktopServices::openUrl(QUrl("./doc/slice_view_desc.pdf"));
 }

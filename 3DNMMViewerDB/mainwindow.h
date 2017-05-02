@@ -26,6 +26,7 @@ private:
 public slots:
     void loadDB();
     void sendSelection();
+    void showMapping();
 };
 
 #endif // MAINWINDOW_H

@@ -14,6 +14,15 @@ TARGET = 3DNMMViewer
 TEMPLATE = app
 
 
+# using shell_path() to correct path depending on platform
+# escaping quotes and backslashes for file paths
+copydata.commands = $(COPY_DIR) \"$$shell_path($$PWD\\doc)\" \"$$shell_path($$OUT_PWD)\"
+first.depends = $(first) copydata
+export(first.depends)
+export(copydata.commands)
+QMAKE_EXTRA_TARGETS += first copydata
+
+
 SOURCES += main.cpp\
         CSVExtractor.cpp\
         mainwindow.cpp \
@@ -28,3 +37,5 @@ HEADERS  += mainwindow.h\
 FORMS    += mainwindow.ui \
     nmm3dpainter.ui \
     pixel.ui
+
+RESOURCES +=
