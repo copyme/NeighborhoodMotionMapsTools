@@ -20,7 +20,7 @@ NMM3DPainter::NMM3DPainter(QWidget *parent) :
 
     /*N1*/
     colorMap["[1, 0, 0]"] = QPalette(QColor (213, 255, 0));
-    colorMap["[0, 1, 0]"] = QPalette(QColor (255, 0, 86));
+    colorMap["[0, 1, 0]"] = QPalette(QColor (120, 150, 50));
     colorMap["[0, 0, 1]"] = QPalette(QColor (158, 0, 142));
     colorMap["[-1, 0, 0]"] = QPalette(QColor (14, 76, 161));
     colorMap["[0, -1, 0]"] = QPalette(QColor (0, 95, 57));
@@ -29,7 +29,7 @@ NMM3DPainter::NMM3DPainter(QWidget *parent) :
     /*N2*/
     colorMap["[1, 1, 0]"] = QPalette(QColor (149, 0, 58));
     colorMap["[1, 0, 1]"] = QPalette(QColor (255, 147, 126));
-    colorMap["[0, 1, 1]"] = QPalette(QColor (164, 36, 0));
+    colorMap["[0, 1, 1]"] = QPalette(QColor (130, 130, 130));
     colorMap["[-1, -1, 0]"] = QPalette(QColor (67, 0, 44));
     colorMap["[-1, 0, -1]"] = QPalette(QColor (145, 208, 203));
     colorMap["[0, -1, -1]"] = QPalette(QColor (107, 104, 130));
