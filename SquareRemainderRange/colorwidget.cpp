@@ -6,7 +6,7 @@ ColorWidget::ColorWidget(QRectF rec, QWidget *parent, const char *p_label):
 {
     setGeometry ( rec.x(), rec.y(), rec.width(), rec.height() );
     QPalette pal( palette() );
-    pal.setColor( QPalette::Background, Qt::transparent );
+    pal.setColor( QPalette::Window, Qt::transparent );
     setAutoFillBackground ( true );
     setPalette ( pal );
 }

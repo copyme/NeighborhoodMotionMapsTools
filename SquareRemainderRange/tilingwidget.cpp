@@ -1,5 +1,6 @@
 #include <QVector>
 #include <QPainter>
+#include <QPainterPath>
 #include "tilingwidget.h"
 
 TilingWidget::TilingWidget (QRectF rec, QWidget *parent , const char *p_label) :
@@ -7,7 +8,7 @@ TilingWidget::TilingWidget (QRectF rec, QWidget *parent , const char *p_label) :
 {
     setGeometry ( rec.x(), rec.y(), rec.width(), rec.height() );
     QPalette pal( palette() );
-    pal.setColor( QPalette::Background, Qt::transparent );
+    pal.setColor( QPalette::Window, Qt::transparent );
     setAutoFillBackground ( true );
     setPalette ( pal );
 
@@ -177,7 +178,7 @@ Frame::Frame (QRectF rec, QWidget *parent) : QWidget ( parent )
 {
     setGeometry ( rec.x(), rec.y(), rec.width(), rec.height() );
     QPalette pal( palette() );
-    pal.setColor( QPalette::Background, Qt::transparent );
+    pal.setColor( QPalette::Window, Qt::transparent );
     setAutoFillBackground ( true );
     setPalette ( pal );
 }

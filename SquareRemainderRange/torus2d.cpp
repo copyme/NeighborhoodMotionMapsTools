@@ -7,7 +7,7 @@ Torus2D::Torus2D(QRectF rec, QWidget *parent):
 {
     setGeometry ( rec.x(), rec.y(), rec.width(), rec.height() );
     QPalette pal( palette() );
-    pal.setColor( QPalette::Background, Qt::white );
+    pal.setColor( QPalette::Window, Qt::white );
     setAutoFillBackground ( true );
     setPalette ( pal );
     m_cos = 0.99500417; //0.1 rad

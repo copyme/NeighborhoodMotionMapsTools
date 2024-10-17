@@ -4,7 +4,7 @@ GraphWidget::GraphWidget(QRectF rec, QWidget *parent) : QWidget ( parent )
 {
     setGeometry ( rec.x(), rec.y(), rec.width(), rec.height() );
     QPalette pal( palette() );
-    pal.setColor( QPalette::Background, Qt::white );
+    pal.setColor( QPalette::Window, Qt::white );
     setAutoFillBackground ( true );
     setPalette ( pal );
 }
